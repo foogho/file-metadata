@@ -8,7 +8,7 @@ var app = express();
 app.use(logger('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.post('/api/file', [
+app.post('/api/fileanalyse', [
   multer.single('upfile'),
   (req, res) => {
     const { originalname: name, mimetype: type, size } = req.file;
